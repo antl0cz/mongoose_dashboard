@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Animal</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <link rel="icon" href="/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="col-md-8">
+        <div class="well">
+            <table class="active">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Type</th>
+                    <th>Update</th>
+                </tr>
+                </thead>
+                <tbody>
+                <form action="/animals/<%= animal.id %>/update " class="form-horizontal" method="post">
+                    <tr>
+                        <td><input type="text" name="name" value="<%= animal.name %>"></td>
+                        <td><input type="text" name="age" value="<%= animal.age %>"></td>
+                        <td><input type="text" name="type" value="<%= animal.type %>"></td>
+                        <td><input type="submit" value="Update" class="btn btn-block"></td>
+                    </tr>
+                </form>
+                </tbody>
+            </table>
+        </div>
+        <a href="/" class="btn btn-warning pull-right">Back</a>
+    </div>
+</div>
+</body>
+</html>

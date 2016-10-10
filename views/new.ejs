@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Animal</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <link rel="icon" href="/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="col-md-8">
+        <div class="well">
+            <form action="/animals" method="post">
+                <table class="table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Type</th>
+                        <th>Submit</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="text" name="name"></td>
+                        <td><input type="text" name="age"></td>
+                        <td><input type="text" name="type"></td>
+                        <td><input type="submit" class="btn-primary"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <a href="/" class="btn-warning pull-right">Back</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

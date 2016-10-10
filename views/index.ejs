@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal Mongoose Dashboard</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <link rel="icon" href="/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="col-md8">
+        <div class="well">
+            <table class="u-full-width">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Type</th>
+                    <th>Entered</th>
+                    <th>Info</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <% for(var x in animal){ %>
+                <tbody>
+                <tr>
+                    <td><%= animal[x].name %></td>
+                    <td><%= animal[x].age %></td>
+                    <td><%= animal[x].type %></td>
+                    <td><%= animal[x].created_at %></td>
+                    <td><a href="/animals/<%= animal[x]._id %>/info">Info</a></td>
+                    <td><a href="/animals/<%= animal[x]._id %>/edit">Edit</a></td>
+                    <td><a href="/animals/<%= animal[x]._id %>/destroy">Delete</a></td>
+                </tr>
+                </tbody>
+                <% } %>
+            </table>
+            <a href="/animals/new" class="btn-primary">Add New Animal</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
